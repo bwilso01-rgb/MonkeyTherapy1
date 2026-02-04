@@ -1,0 +1,361 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden; /* prevents scrolling */
+}
+
+/* Body & Background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: url("CURORSmiley.svg_copy.png"), auto;
+
+    /* background-image: url("backgroundtherapyoffice.jpg"); */
+    background-position:  center;
+    background-size: 1650px;
+    background-repeat: no-repeat;
+    background-position-y: -110px;
+      background-image: url('backgroundtherapyoffice.jpg');
+  background-color: #dceafc; /* The color you want to blend in */
+  background-blend-mode: multiply; /* Experiment with different blend modes */
+
+   
+}
+
+.backbutton {
+  position: fixed;
+    top: 3px;
+    left: 10px;
+    width: 200px;
+    z-index: 999;
+  padding-top: 50px;
+  transition: opacity 0.5s ease;
+
+
+}
+
+#weirdart a {
+    display: block;
+    background-color: rgba(255, 0, 0, 0.3); /* temporary red overlay */
+}
+
+#weirdart {
+    position: fixed;
+    top: 100px;
+    left: 300px;
+    z-index: 100;  /* Make sure it's on top */
+}
+
+#weirdart a {
+    display: inline-block;
+    cursor: pointer;
+}
+
+#weirdart a img {
+    width: 245px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+#weirdart a img:hover {
+    filter: drop-shadow(0 0 20px #ffd900) 
+            drop-shadow(0 0 30px #ffd900);
+    transform: scale(1.1);
+}
+
+#monkeyonchair {
+    display: flex;
+    justify-content: center;
+    width: 850px;
+    height: 700px;
+    z-index: 10; /* Higher value brings it to the front */
+  filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.7));
+position: fixed;
+    top: 140px;
+}
+
+
+/* For the sticky note and text */
+ .note-container {
+    position: fixed;
+    top: 1px;
+    right: 1px;
+    width: 600px;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    
+}
+
+.note_warning {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    
+}
+
+.note-text {
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    font-family: "Zeyada", cursive;
+  font-weight: 400;
+  font-style: normal;
+    color: #373131;
+    font-size: 26px;
+}
+
+.note-text h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    
+
+  
+}
+
+
+.note-text ul {
+    list-style-position: inside;
+    padding-left: 0;
+   
+ 
+}
+
+.note-text li.warning {
+    color: #8B0000; 
+}
+
+
+
+
+
+#overlay-container {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(227, 234, 246);
+    z-index: 1000;
+    padding: 10px;
+    width: 640px;
+}
+
+#overlay {
+    font-size: 2rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    margin-top: 30px;
+    color: white;
+  /* Horizontal offset, vertical offset, blur radius, color */
+  text-shadow: 1px 1px 3px black, -1px -1px 3px black, 1px -1px 3px black, -1px 1px 3px black;
+  /* A more refined shadow */
+    
+}
+
+/* Start Button */
+#startBtn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #ffd966;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+#startBtn:hover {
+    transform: scale(1.1);
+    background-color: #ffc107;
+}
+
+#sadGif {
+    position: fixed;
+    top: 320px;
+    left: 650px;
+    width: 200px;
+    z-index: 999;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease;
+}
+
+#sadGif.visible {
+    opacity: 1;
+}
+
+
+@media screen and (max-width: 768px) {
+    #overlay {
+        font-size: 1.5rem;
+    }
+
+    #startBtn {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+
+    #sadGif {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #overlay {
+        font-size: 1.2rem;
+    }
+
+    #startBtn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    #sadGif {
+        width: 120px;
+    }
+}
+
+
+#madGif {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease, width 0.6s ease;
+}
+
+#madGif.visible {
+    opacity: 1;
+    width: 800px; 
+}
+
+body.dark-background {
+    background-image: none !important;
+    background-color: black !important;
+    transition: background-color 0.6s ease;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    #overlay {
+        font-size: 1.5rem;
+    }
+
+    #startBtn {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+
+    #madGif {
+        width: fit-content;
+        background-color: #0e0e0e;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #overlay {
+        font-size: 1.2rem;
+    }
+
+    #startBtn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    #madGif {
+        width: 120px;
+    }
+}
+
+
+#happyGif {
+    position: fixed;
+    top: 280px;
+    left: 650px;
+    width: 200px;
+    z-index: 999;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease;
+}
+
+#happyGif.visible {  
+    opacity: 1;
+}
+
+
+@media screen and (max-width: 768px) {
+    #overlay {
+        font-size: 1.5rem;
+    }
+
+    #startBtn {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+
+    #happyGif {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #overlay {
+        font-size: 1.2rem;
+    }
+
+    #startBtn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    #happyGif {
+        width: 120px;
+    }
+}
+
+
+
+/* Rain effect */
+.rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 997;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.rain.visible {
+    opacity: 1;
+}
+
+.raindrop {
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    background: linear-gradient(to bottom, rgba(174, 194, 224, 0), rgba(174, 194, 224, 0.8));
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+

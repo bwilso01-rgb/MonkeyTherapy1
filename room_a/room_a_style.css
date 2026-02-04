@@ -1,0 +1,178 @@
+body {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    cursor: url("CURORSmiley.svg\ copy.png"), auto;
+
+    
+    background-image: url("monkeydesk.jpg");
+  background-size: cover;        /* makes it cover the screen */
+  background-position: top center; /* aligns the top of the image */
+  background-repeat: no-repeat;
+    position: relative; 
+}
+
+
+.note-container {
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+    width: 600px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.note_warning {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.note-text {
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    font-family: "Zeyada", cursive;
+  font-weight: 400;
+  font-style: normal;
+    color: #373131;
+    font-size: 26px;
+}
+
+.note-text h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.note-text ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.note-text li.warning {
+    color: #8B0000; 
+}
+
+
+.buttons {
+  position: fixed;
+    top: 3px;
+    right: 10px;
+    width: 200px;
+    z-index: 999;
+  padding-top: 50px;
+  transition: opacity 0.5s ease;
+
+
+}
+.backbutton {
+  position: fixed;
+    top: 3px;
+    left: 10px;
+    width: 200px;
+    z-index: 999;
+  padding-top: 50px;
+  transition: opacity 0.5s ease;
+
+
+}
+
+
+
+#dialogue {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 60px;
+}
+
+/* from the example */
+.tooltip {
+  position: absolute;  
+  left: 750px;          
+  top: 30px;        
+ 
+
+ 
+  color: #373131;
+  max-width: 520px;
+  text-align: center;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 20px;
+
+  --b: 1em;
+  --h: .7em;
+  --c:#fcf1ec;
+
+  padding: 5px;
+  border-radius: 1.2em;
+  border-bottom-left-radius: 0;
+  clip-path: polygon(0 0,100% 0,100% 100%,
+    var(--b) 100%,
+    calc(-1*var(--h)) calc(100% + var(--h)),
+    0 calc(100% - var(--b)));
+  background: var(--c);
+  border-image: conic-gradient(var(--c) 0 0) 0 0 999 999/
+    0 0 calc(var(--h) + var(--b)) calc(var(--h) + var(--b))/0 0 var(--h) var(--h);
+}
+
+
+#dino img {
+  position: fixed; 
+  top: 440px;
+  right: 850px;
+  width: 100px;
+  transition: filter 0.3s ease;  /* smooth transition */
+}
+
+#dino img:hover {
+  filter: drop-shadow(0 0 20px #ffd900) 
+          drop-shadow(0 0 30px #ffd900);
+  transform: scale(1.1);  /* optional: makes it slightly bigger */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* THIS IS FOR THE IPAD AND IPHONE SIZES */
+
+/* max width desktop first */
+/* @media screen and (max-width:900px) {
+  body {
+    background: #e5c6aa;
+  }
+
+  main {
+    flex-wrap:wrap;
+  }
+
+  .left {
+    width:100%;
+  }
+
+  .center, .right {
+    width:49%;
+    width:calc(50% - 5px);
+  }
+}
+
+@media screen and (max-width:600px) {
+  html {
+    font-size: 200%;
+  }
+
+  body {
+    background: #dbbebb;
+  }
+
+  .left, .center, .right {
+    width:100%;
+  }
+} */
